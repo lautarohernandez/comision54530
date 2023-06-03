@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
+}
+
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  background-attachment: fixed;
+}
+
+.hero h1 {
+  text-align: center;
+  padding-top: 60px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 100px;
+  text-shadow: 0px 0px 5px white;
+}
+
+.hero h2 {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .hero {
+      height: 200px;
+      width: 100%;
+  }
+
+  .hero h1 {
+      font-size: 60px;
+      padding-top: 30px;
+  }
+
+  .hero h2 {
+      font-size: 40px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero {
+      height: 150px;
+      width: 100%;
+  }
+
+  .hero h1 {
+      font-size: 40px;
+      padding-top: 20px;
+  }
+
+  .hero h2 {
+      font-size: 30px;
+  }
+}
+
+.noticia {
+  display: flex;
+  width: 100%;
+  min-height: 480px;
+  background-color: black;
+  opacity: 80%;
+  align-items: center;
+  text-align: center;
+}
+
+.noticia div {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.noticia div h2,
+.noticia div p {
+  color: whitesmoke;
+}
+
+.noticia div img {
+  width: 100%;
+  height: auto;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .noticia {
+      flex-wrap: wrap;
+  }
+
+  .noticia div {
+      flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .noticia div h2 {
+      font-size: 24px;
+  }
+
+  .noticia div p {
+      font-size: 16px;
+  }
+}
+
+
+.noticia2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 480px;
+    background-color: black;
+    opacity: 80%;
+    align-items: center;
+    text-align: center;
+}
+
+.noticia2 div h2 {
+  color: whitesmoke;
+}
+
+.noticia2 div p {
+  color: whitesmoke;
+}
+
+.noticia2 div img {
+  width: 420px;
+  height: 350px;
+  margin: 20px;
+}
+
+.boton {
+  min-width: 130px;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #212529;
+  background: #212529;
+}
+.boton:hover {
+  background: #fff;
+  color: #212529;
+}
+
+
+
+.marcas {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.24);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+  .destacado {
+    display: flex;
+    background-image: url(../img/coverproductodestacado.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f5f5f5;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+  
+  .card {
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  .highlight {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:700;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    text-align: center;
+    font-size: large;
+    color: #fff;
+    padding: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .card-price {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .card-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .card-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 767px) {
+    .card {
+      max-width: 100%;
+    }
+  }
+
+  .noticias {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Banner Banner Banner Banner Banner"
+      "Noticia2 Noticia2 Noticia1 Noticia1 Noticia1"
+      "Noticia2 Noticia2 Noticia1 Noticia1 Noticia1"
+      "Noticia3 Noticia3 Noticia3 Noticia3 Noticia3";
+  }
+  
+  .Banner { grid-area: Banner;
+            display: flex;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(0, 59, 0, 0.418);
+            font-family: 'Josefin Sans', sans-serif;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+}
+  
+  .Noticia3 { grid-area: Noticia3;
+            width: 100%;
+            height: 200px;
+            background-image: url(../img/noticia3.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+}
+  
+  .Noticia1 { grid-area: Noticia1;
+            width: 3fr;
+            height: 2fr;
+            background-image: url(../img/noticia1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+}
+  
+  .Noticia2 { grid-area: Noticia2;
+            width: 2fr;
+            height: 2fr;
+            background-image: url(../img/noticia2.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+}
+
+.noticias div h2{
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 30px;
+
+}
+.noticias div p{
+font-family: 'Josefin Sans', sans-serif;
+    padding: 30px;
+}
+
+@media (max-width: 600px) {
+  .noticias {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+      "Banner"
+      "Noticia2"
+      "Noticia1"
+      "Noticia3";
+  }
+  .noticias div p{
+    display: none;
+  }
+}
+
+.footer{
+    display: flex;
+    background-image: url(../img/footer.png);
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer img{
+    width: 60px;
+    height: 60px;
+}
+
+.footer div ul li{
+    list-style: none;
+    
+}
+
+.footer div ul li a{
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
